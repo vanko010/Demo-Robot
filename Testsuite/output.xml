@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2024-12-20T16:24:08.824914" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase" source="/home/nvpa/Desktop/Demo-Robot/Testsuite/testcase.robot">
+<test id="s1-t1" name="Login" line="5">
+<kw name="Login To Website" owner="keywork">
+<kw name="Load JSON Data" owner="cus_lib">
+<msg time="2024-12-20T16:24:10.157680" level="INFO">${dataFile} = [{'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'xuser': "//input[@placeholder='Username']", 'username': 'Admin', 'password': 'admin123', 'xpass': "//input[@placeholder=...</msg>
+<var>${dataFile}</var>
+<arg>${file_path}</arg>
+<status status="PASS" start="2024-12-20T16:24:09.678944" elapsed="0.478811"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-20T16:24:10.159206" level="INFO">Running test: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<arg>Running test: ${data['url']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-20T16:24:10.158415" elapsed="0.000869"/>
+</kw>
+<kw name="Get Url" owner="cus_lib">
+<arg>${data['url']}</arg>
+<status status="PASS" start="2024-12-20T16:24:10.159435" elapsed="2.985964"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T16:24:16.145978" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T16:24:13.145616" elapsed="3.000534"/>
+</kw>
+<kw name="Login" owner="cus_lib">
+<arg>${data['username']}</arg>
+<arg>${data['password']}</arg>
+<arg>${data['xuser']}</arg>
+<arg>${data['xpass']}</arg>
+<arg>${data['xlogin']}</arg>
+<status status="PASS" start="2024-12-20T16:24:16.146426" elapsed="0.186221"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T16:24:19.333404" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T16:24:16.332986" elapsed="3.000572"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Verify URL" owner="cus_lib">
+<arg>${data['expected_url']}</arg>
+<status status="PASS" start="2024-12-20T16:24:19.334044" elapsed="0.005383"/>
+</kw>
+<arg>Verify URL</arg>
+<arg>${data['expected_url']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-20T16:24:19.333791" elapsed="0.005740"/>
+</kw>
+<kw name="Clear Session" owner="cus_lib">
+<doc>Xóa cookie để xóa session đăng nhập hiện tại.</doc>
+<status status="PASS" start="2024-12-20T16:24:19.339710" elapsed="0.006852"/>
+</kw>
+<var name="${data}">{'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'xuser': "//input[@placeholder='Username']", 'username': 'Admin', 'password': 'admin123', 'xpass': "//input[@placeholder='...</var>
+<status status="PASS" start="2024-12-20T16:24:10.158222" elapsed="9.188423"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-20T16:24:19.347599" level="INFO">Running test: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<arg>Running test: ${data['url']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-20T16:24:19.347014" elapsed="0.000647"/>
+</kw>
+<kw name="Get Url" owner="cus_lib">
+<arg>${data['url']}</arg>
+<status status="PASS" start="2024-12-20T16:24:19.347785" elapsed="0.437633"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T16:24:22.786120" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T16:24:19.785699" elapsed="3.000587"/>
+</kw>
+<kw name="Login" owner="cus_lib">
+<arg>${data['username']}</arg>
+<arg>${data['password']}</arg>
+<arg>${data['xuser']}</arg>
+<arg>${data['xpass']}</arg>
+<arg>${data['xlogin']}</arg>
+<status status="PASS" start="2024-12-20T16:24:22.786549" elapsed="0.160414"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T16:24:25.947568" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T16:24:22.947194" elapsed="3.000578"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Verify URL" owner="cus_lib">
+<msg time="2024-12-20T16:24:25.956867" level="FAIL">Expected URL is https://opensource-demo.orangehrmlive.com/web/index.php/auth/login1, Actual URL is https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<arg>${data['expected_url']}</arg>
+<status status="FAIL" start="2024-12-20T16:24:25.948640" elapsed="0.008870">Expected URL is https://opensource-demo.orangehrmlive.com/web/index.php/auth/login1, Actual URL is https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</status>
+</kw>
+<arg>Verify URL</arg>
+<arg>${data['expected_url']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2024-12-20T16:24:25.948231" elapsed="0.009510">Expected URL is https://opensource-demo.orangehrmlive.com/web/index.php/auth/login1, Actual URL is https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</status>
+</kw>
+<kw name="Clear Session" owner="cus_lib">
+<doc>Xóa cookie để xóa session đăng nhập hiện tại.</doc>
+<status status="PASS" start="2024-12-20T16:24:25.958082" elapsed="0.009699"/>
+</kw>
+<var name="${data}">{'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'Admin', 'password': 'password wrong', 'xuser': "//input[@placeholder='Username']", 'xpass': "//input[@placeho...</var>
+<status status="FAIL" start="2024-12-20T16:24:19.346865" elapsed="6.621121">Expected URL is https://opensource-demo.orangehrmlive.com/web/index.php/auth/login1, Actual URL is https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</status>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-20T16:24:25.969874" level="INFO">Running test: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<arg>Running test: ${data['url']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-20T16:24:25.968679" elapsed="0.001370"/>
+</kw>
+<kw name="Get Url" owner="cus_lib">
+<arg>${data['url']}</arg>
+<status status="PASS" start="2024-12-20T16:24:25.970306" elapsed="0.443718"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T16:24:29.414775" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T16:24:26.414328" elapsed="3.000737"/>
+</kw>
+<kw name="Login" owner="cus_lib">
+<arg>${data['username']}</arg>
+<arg>${data['password']}</arg>
+<arg>${data['xuser']}</arg>
+<arg>${data['xpass']}</arg>
+<arg>${data['xlogin']}</arg>
+<status status="PASS" start="2024-12-20T16:24:29.415583" elapsed="0.225498"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T16:24:32.641823" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T16:24:29.641407" elapsed="3.000563"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Verify URL" owner="cus_lib">
+<arg>${data['expected_url']}</arg>
+<status status="PASS" start="2024-12-20T16:24:32.642464" elapsed="0.005525"/>
+</kw>
+<arg>Verify URL</arg>
+<arg>${data['expected_url']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-20T16:24:32.642215" elapsed="0.005875"/>
+</kw>
+<kw name="Clear Session" owner="cus_lib">
+<doc>Xóa cookie để xóa session đăng nhập hiện tại.</doc>
+<status status="PASS" start="2024-12-20T16:24:32.648263" elapsed="0.006328"/>
+</kw>
+<var name="${data}">{'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'User_wrong', 'password': 'admin123', 'xuser': "//input[@placeholder='Username']", 'xpass': "//input[@placehol...</var>
+<status status="PASS" start="2024-12-20T16:24:25.968416" elapsed="6.686268"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-20T16:24:32.655800" level="INFO">Running test: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<arg>Running test: ${data['url']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-20T16:24:32.655179" elapsed="0.000684"/>
+</kw>
+<kw name="Get Url" owner="cus_lib">
+<arg>${data['url']}</arg>
+<status status="PASS" start="2024-12-20T16:24:32.655991" elapsed="0.438509"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T16:24:36.095315" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T16:24:33.094880" elapsed="3.000564"/>
+</kw>
+<kw name="Login" owner="cus_lib">
+<arg>${data['username']}</arg>
+<arg>${data['password']}</arg>
+<arg>${data['xuser']}</arg>
+<arg>${data['xpass']}</arg>
+<arg>${data['xlogin']}</arg>
+<status status="PASS" start="2024-12-20T16:24:36.095640" elapsed="0.986534"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-20T16:24:40.082944" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-20T16:24:37.082520" elapsed="3.000613"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Verify URL" owner="cus_lib">
+<arg>${data['expected_url']}</arg>
+<status status="PASS" start="2024-12-20T16:24:40.083782" elapsed="0.006309"/>
+</kw>
+<arg>Verify URL</arg>
+<arg>${data['expected_url']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-20T16:24:40.083456" elapsed="0.006784"/>
+</kw>
+<kw name="Clear Session" owner="cus_lib">
+<doc>Xóa cookie để xóa session đăng nhập hiện tại.</doc>
+<status status="PASS" start="2024-12-20T16:24:40.090507" elapsed="0.008364"/>
+</kw>
+<var name="${data}">{'url': 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'username': 'User_wrong', 'password': 'password wrong', 'xuser': "//input[@placeholder='Username']", 'xpass': "//input[@pl...</var>
+<status status="PASS" start="2024-12-20T16:24:32.654992" elapsed="7.443998"/>
+</iter>
+<var>${data}</var>
+<value>@{dataFile}</value>
+<status status="FAIL" start="2024-12-20T16:24:10.157942" elapsed="29.941178">Expected URL is https://opensource-demo.orangehrmlive.com/web/index.php/auth/login1, Actual URL is https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</status>
+</for>
+<arg>$data</arg>
+<status status="FAIL" start="2024-12-20T16:24:09.678248" elapsed="30.421110">Expected URL is https://opensource-demo.orangehrmlive.com/web/index.php/auth/login1, Actual URL is https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</status>
+</kw>
+<status status="FAIL" start="2024-12-20T16:24:09.677404" elapsed="30.422369">Expected URL is https://opensource-demo.orangehrmlive.com/web/index.php/auth/login1, Actual URL is https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</status>
+</test>
+<status status="FAIL" start="2024-12-20T16:24:08.826161" elapsed="31.274402"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testcase">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
