@@ -1,0 +1,18 @@
+{
+    "Login": 
+        [
+            {
+                "name":"",
+                "description":"",
+                "data":{
+                        "url":"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+                        "xuser":"//input[@placeholder='Username']",
+                        "username":"Admin",
+                        "password":"admin123",
+                        "xpass":"//input[@placeholder='Password']",
+                        "xlogin":"//button[normalize-space()='Login']",
+                        "expected_url":"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"
+                    }
+            }
+        ]
+}
