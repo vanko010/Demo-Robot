@@ -22,7 +22,7 @@ class cus_lib:
         chrome_options = Options()
         chrome_options.add_argument("--disable-dev-shm-usage")  # Khắc phục lỗi bộ nhớ thấp
         chrome_options.add_argument("--use-gl=desktop")            # Chạy mà không cần sandbox (trên Linux)
-        chrome_options.add_argument("--headless")              # Chế độ không giao diện (nếu cần)
+        #chrome_options.add_argument("--headless")              # Chế độ không giao diện (nếu cần)
         chrome_options.add_argument("--start-maximized")
         self.driver = webdriver.Chrome(service=service, options=chrome_options)        
 
