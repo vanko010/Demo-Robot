@@ -22,3 +22,14 @@ Login To Website
         Run Keyword And Continue On Failure    Verify URL        ${case['data']['expected_url']}
         Clear Session
     END
+
+Click Element
+    [Arguments]    ${locator_menu}    ${locator_item}    ${expected_url}
+    Click    ${locator_menu}    #Click menu
+    Click    ${locator_item}    #Click item in menu
+    Sleep    3
+    Verify Url    ${expected_url}
+
+Check Element is Displayed
+    [Arguments]    ${xelement}
+    Verify Element    ${xelement}

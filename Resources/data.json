@@ -1,69 +1,438 @@
 {
-  "Login": [
+  "Header-PA": [
     {
-      "name": "Case 1 - Login true",
-      "description": "Happy Case",
+      "name": "Case 1 - Ten mien",
+      "description": "Dang ky ten mien",
       "data": {
-        "url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
-        "xuser": "//input[@placeholder='Username']",
-        "username": "Admin",
-        "password": "admin123",
-        "xpass": "//input[@placeholder='Password']",
-        "xlogin": "//button[normalize-space()='Login']",
-        "expected_url": "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"
+        "url": "https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@role='button'][contains(text(),'TÊN MIỀN')]",
+        "locator_item":"//a[@title='Đăng Ký Tên Miền']",
+        "expected_url": "https://www.pavietnam.vn/vn/dang-ky-ten-mien.html"
       }
     },
     {
-      "name": "Case 2 - Login fail",
-      "description": "Negative Case",
-      "data": {
-        "url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
-        "username": "Admin",
-        "password": "password wrong",
-        "xuser": "//input[@placeholder='Username']",
-        "xpass": "//input[@placeholder='Password']",
-        "xlogin": "//button[normalize-space()='Login']",
-        "expected_url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+      "name": "Case 2 - Ten mien",
+      "description":"Bang gia ten mien",
+      "data":{
+        "url": "https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@role='button'][contains(text(),'TÊN MIỀN')]",
+        "locator_item":"//a[@title='Bảng Giá Tên Miền']",
+        "expected_url":"https://www.pavietnam.vn/vn/ten-mien-bang-gia.html"
       }
     },
     {
-      "name": "Case 3 - Login fail",
-      "description": "Negative Case",
-      "data": {
-        "url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
-        "username": "User_wrong",
-        "password": "admin123",
-        "xuser": "//input[@placeholder='Username']",
-        "xpass": "//input[@placeholder='Password']",
-        "xlogin": "//button[normalize-space()='Login']",
-        "expected_url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+      "name": "Case 3 - Ten mien",
+      "description":"Chuyen ten mien ve PA",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@role='button'][contains(text(),'TÊN MIỀN')]",
+        "locator_item":"//a[@title='Chuyển Tên Miền Về P.A']",
+        "expected_url":"https://www.pavietnam.vn/vn/ten-mien/chuyen-ten-mien-ve-pa"
+      }
+    },
+
+    {
+      "name": "Case 4 - Ten mien",
+      "description":"Tim kiem ten mien",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@role='button'][contains(text(),'TÊN MIỀN')]",
+        "locator_item":"//a[@title='Bảng Giá Tên Miền']",
+        "expected_url":"https://www.pavietnam.vn/vn/ten-mien/tim-kiem-ten-mien"
+      }
+    },
+
+    {
+      "name": "Case 5 - Ten mien",
+      "description":"Ten mien mien phi",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@role='button'][contains(text(),'TÊN MIỀN')]",
+        "locator_item":"//a[@title='Tên Miền Miễn Phí']",
+        "expected_url":"https://www.pavietnam.vn/vn/ten-mien-mien-phi.html"
+      }
+    },
+
+    {
+      "name": "Case 1 - Dich vu",
+      "description":"Bao mat ten mien",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@role='button'][contains(text(),'TÊN MIỀN')]",
+        "locator_item":"//a[@title='Bảo Mật Tên Miền']",
+        "expected_url":"https://www.pavietnam.vn/vn/ten-mien/bao-mat-ten-mien"
       }
     },
     {
-      "name": "Case 4 - Login fail",
-      "description": "Negative Case",
-      "data": {
-        "url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
-        "username": "User_wrong",
-        "password": "password wrong",
-        "xuser": "//input[@placeholder='Username']",
-        "xpass": "//input[@placeholder='Password']",
-        "xlogin": "//button[normalize-space()='Login']",
-        "expected_url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+      "name": "Case 2 - Dich vu",
+      "description":"Tien ich DNS",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@role='button'][contains(text(),'TÊN MIỀN')]",
+        "locator_item":"//a[@title='Tiện Ích DNS']",
+        "expected_url":"https://www.pavietnam.vn/vn/ten-mien/tien-ich-dns"
       }
     },
     {
-      "name": "Case 5  - Login fail",
-      "description": "Negative Case",
-      "data": {
-        "url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
-        "username": "",
-        "password": "",
-        "xuser": "//input[@placeholder='Username']",
-        "xpass": "//input[@placeholder='Password']",
-        "xlogin": "//button[normalize-space()='Login']",
-        "expected_url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+      "name": "Case 3 - Dich vu",
+      "description":"San giao dich & Dau gia",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@role='button'][contains(text(),'TÊN MIỀN')]",
+        "locator_item":"//a[@title='Sàn Giao Dịch & Đấu Giá']",
+        "expected_url":"https://bid.pavietnam.vn/"
       }
-    }
+    },
+    {
+      "name": "Case 4 - Dich vu",
+      "description":"Chuyen nhuong ten mien",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@role='button'][contains(text(),'TÊN MIỀN')]",
+        "locator_item":"//a[@title='Chuyển Nhượng Tên Miền']",
+        "expected_url":"https://www.pavietnam.vn/vn/ten-mien/chuyen-nhuong-ten-mien"
+      }
+    },
+    {
+      "name": "Case 1 - Web & Hosting",
+      "description":"Hosting - Web Hosting",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='Web Hosting'][normalize-space()='Web Hosting']",
+        "expected_url":"https://www.pavietnam.vn/vn/hosting/web-hosting"
+      }
+    },
+    {
+      "name": "Case 2 - Web & Hosting ",
+      "description":"Hosting - WordPress",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='WordPress']",
+        "expected_url":"https://www.pavietnam.vn/vn/hosting/wordpress"
+      }
+    },
+    {
+      "name": "Case 3 - Web & Hosting",
+      "description":"Hosting - Chuyen dung",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//ul[@class='sub-menu dropdown-menu show']//li[1]//ul[1]//li[1]//a[1]",
+        "expected_url":"https://www.pavietnam.vn/vn/hosting/web-hosting-nodejs"
+      }
+    },
+    {
+      "name": "Case 1 - Web & Hosting",
+      "description":"Server - Cloud Server",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='Cloud Server'][normalize-space()='Cloud Server']",
+        "expected_url":"https://www.pavietnam.vn/vn/server/cloud-server"
+      }
+    },
+    {
+      "name": "Case 2 - Web & Hosting",
+      "description":"Server - Virtual Private Cloud",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='Virtual Private Cloud']",
+        "expected_url":"https://www.pavietnam.vn/vn/server/virtual-private-cloud"
+      }
+    },
+    {
+      "name":"Case 3 - Web & Hosting",
+      "description":"Server - Dedicated Server",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='Dedicated Server']",
+        "expected_url":"https://www.pavietnam.vn/vn/server/dedicated-server"
+      }
+    },
+    {
+      "name":"Case 4 - Web & Hosting",
+      "description":"Server - May chu ke toan",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='Máy Chủ Kế Toán']",
+        "expected_url":"https://www.pavietnam.vn/vn/server/cloud-finance"
+      }
+    },
+    {
+      "name":"Case 5 - Web & Hosting",
+      "description":"Server - Co-Location",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='WEB & HOSTING']",
+        "expected_url":"//a[@title='Co-Location']"
+      }
+    },
+    {
+      "name":"Case 6 - Web & Hosting",
+      "description":"Server - Chuyen dung",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//ul[@class='sub-menu dropdown-menu show']//li[2]//ul[1]//li[6]//a[1]",
+        "expected_url":"https://www.pavietnam.vn/vn/server/nodejs"
+      }
+    },
+    {
+      "name":"Case 1 Web & Hosting",
+      "description":"Website - Xay dung website",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='Xây Dựng Website']",
+        "expected_url":"https://www.pavietnam.vn/vn/website/xay-dung-website"
+      }
+    },
+    {
+      "name":"Case 2 - Web & Hosting",
+      "description":"Website - Cham soc website",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='Chăm Sóc Website']",
+        "expected_url":"https://www.pavietnam.vn/vn/website/cham-soc-website"
+      }
+    },
+    {
+      "name":"Case 3 - Web & Hosting",
+      "description":"Website - Dang ky bo cong thuong",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='Đăng Ký Bộ Công Thương']",
+        "expected_url":"https://www.pavietnam.vn/vn/dich-vu-dang-ky-website-voi-bo-cong-thuong.html"
+      }
+    },
+    {
+      "name":"Case 1 - Web & Hosting",
+      "description":"Dich vu - CDN",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='CDN']",
+        "expected_url":"https://www.pavietnam.vn/vn/cdn30s"
+      }
+    },
+    {
+      "name":"Case 2 - Web & Hosting",
+      "description":"Dich vu - ElasticCached",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='ElasticCached']",
+        "expected_url":"https://www.pavietnam.vn/vn/elasticcached"
+      }
+    },
+    {
+      "name":"Case 3 - Web & Hosting",
+      "description":"Dich vu - Cloud Driver30s",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='Cloud Drive30s']",
+        "expected_url":"https://www.pavietnam.vn/vn/server/cloud-drive30s"
+      }
+    },
+    {
+      "name":"Case 4 - Web & Hosting",
+      "description":"Dich vu - Backup & Luu tru du lieu",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='Backup & Lưu Trữ Dữ Liệu']",
+        "expected_url":"https://www.pavietnam.vn/vn/sao-luu-du-lieu-may-chu"
+      }
+    },
+    {
+      "name":"Case 5 - Web & Hosting",
+      "description":"Quan tri may chu",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='Quản Trị Máy Chủ']",
+        "expected_url":"https://www.pavietnam.vn/vn/server/quan-tri-may-chu"
+      }
+    },
+    {
+      "name":"Case 6 - Web & Hosting",
+      "description":"Dich vu - Kham pha them",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='WEB & HOSTING']",
+        "locator_item":"//a[@title='Khám Phá Thêm']",
+        "expected_url":"https://www.pavietnam.vn/vn/he-thong-can-bang-tai.html"
+      }
+    },
+    {
+      "name":"Case 1 - Email",
+      "description":"Email server - May chu Email cho doanh nghiep",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='EMAIL']",
+        "locator_item":"//a[@title='Máy Chủ Email Cho Doanh Nghiệp']",
+        "expected_url":"https://www.pavietnam.vn/vn/email-server/may-chu-email-cho-doanh-nghiep"
+      }
+    },
+    {
+      "name":"Case 2 - Email",
+      "description":"Email server - Google Workspace",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='EMAIL']",
+        "locator_item":"//a[@title='Google Workspace']",
+        "expected_url":"https://www.pavietnam.vn/vn/email-server/google-workspace"
+      }
+    },
+    {
+      "name":"Case 3 - Email",
+      "description":"Email server - Microsoft 365",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='EMAIL']",
+        "locator_item":"//a[@title='Microsoft 365']",
+        "expected_url":"https://www.pavietnam.vn/vn/email-server/microsoft-365"
+      }
+    },
+    {
+      "name":"Case 4 - Email",
+      "description":"Email server - Hybrid Email",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='EMAIL']",
+        "locator_item":"//a[@title='Hybrid Email']",
+        "expected_url":"https://www.pavietnam.vn/vn/hybrid-email"
+      }
+    },
+    {
+      "name":"Case 1 - Email",
+      "description":"Dich vu - Chu ky Email",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='EMAIL']",
+        "locator_item":"//a[@title='Chữ Ký Email']",
+        "expected_url":"https://www.pavietnam.vn/vn/chu-ky-email"
+      }
+    },
+    {
+      "name":"Case 2 - Email",
+      "description":"Dich vu - Chu ky so Email",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='EMAIL']",
+        "locator_item":"//a[@title='Chữ Ký Số Email']",
+        "expected_url":"https://www.pavietnam.vn/vn/chu-ky-so-email"
+      }
+    },
+    {
+      "name":"Case 3 - Email",
+      "description":"Dich vu - Quan tri Email Server",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='EMAIL']",
+        "locator_item":"//a[@title='Quản Trị Email Server']",
+        "expected_url":"https://www.pavietnam.vn/vn/quan-tri-email"
+      }
+    },
+    {
+      "name":"Case 4 - Email",
+      "description":"Dich vu - Bao mat & Bao ve Email",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='EMAIL']",
+        "locator_item":"//a[@title='Bảo Mật & Bảo Vệ Email']",
+        "expected_url":"https://www.pavietnam.vn/vn/email-antispam-protection"
+        }
+    },
+    {
+      "name":"Case 5 - Email",
+      "description":"Dich vu - Sao luu du lieu email",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='EMAIL']",
+        "locator_item":"//a[@title='Sao Lưu Dữ Liệu Email']",
+        "expected_url":"https://www.pavietnam.vn/vn/sao-luu-du-lieu-email"
+        }
+    },
+    {
+      "name":"Case 1 - Marketing",
+      "description":"Bo tiep thi ky thuat so - biz30s",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='MARKETING']",
+        "locator_item":"//a[@title='Biz30s']",
+        "expected_url":"https://www.pavietnam.vn/vn/biz30s"
+      }
+    },
+    {
+      "name":"Case 2 - Marketing",
+      "description":"Bo tiep thi ky thuat so - Google Ads",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='MARKETING']",
+        "locator_item":"//a[@title='Google Ads']",
+        "expected_url":"https://www.pavietnam.vn/vn/google-adwords"
+      }
+    },
+    {
+      "name":"Case 3 - Marketing",
+      "description":"Bo tiep thi ky thuat so - Facebook Ads",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='MARKETING']",
+        "locator_item":"//a[@title='Facebook Ads']",
+        "expected_url":"https://www.pavietnam.vn/vn/facebook-ads"
+      }
+    },
+    {
+      "name":"Case 4 - Marketing",
+      "description":"Bo tiep thi ky thuat so - Email Marketing",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='MARKETING']",
+        "locator_item":"//a[@title='Email Marketing']",
+        "expected_url":"https://www.pavietnam.vn/vn/email-marketing"
+      }
+    },
+    {
+      "name":"Case 5 - Marketing",
+      "description":"Bo tiep thi ky thuat so - SMS Marketing",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='MARKETING']",
+        "locator_item":"//a[@title='SMS Brandname']",
+        "expected_url":"https://www.pavietnam.vn/vn/sms-brandname"
+      }
+    },
+    {
+      "name":"Case 1 - Marketing",
+      "description":"Thiet ke & Do hoa - Thiet ke logo",
+      "data":{
+        "url":"https://www.pavietnam.vn/vn/",
+        "locator_menu":"//a[@title='MARKETING']",
+        "locator_item":"//a[@title='Thiết Kế Logo']",
+        "expected_url":"https://www.pavietnam.vn/vn/website/thiet-ke-logo"
+        }
+      },
+      {
+        "name":"Case 2 - Marketing",
+        "description":"Thiet ke & Do hoa - Thiet ke Banner",
+        "data":{
+          "url":"https://www.pavietnam.vn/vn/",
+          "locator_menu":"//a[@title='MARKETING']",
+          "locator_item":"//a[@title='Thiết Kế Banner']",
+          "expected_url":"https://www.pavietnam.vn/vn/website/thiet-ke-banner"
+        }
+      }
+    
   ]
 }

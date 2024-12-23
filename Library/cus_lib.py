@@ -4,6 +4,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import Select
 from robot.api.logger import info, debug, console
@@ -31,6 +34,10 @@ class cus_lib:
     def get_url(self,url):
         self.driver.get(url)
 
+
+    @keyword("Refresh Url")
+    def refresh_url(self):
+        self.driver.refresh()
 #Load Data
     @keyword ("Load JSON Data")
     def load_json_data(self, file_path):
@@ -64,3 +71,18 @@ class cus_lib:
     def clear_session(self):
         """Xóa cookie để xóa session đăng nhập hiện tại."""
         self.driver.delete_all_cookies()
+
+#Click
+    @keyword("Click")
+    def click_emlement(self,locator):
+        self.driver.find_element(By.XPATH,locator).click()
+
+#Verify element is Displayed
+    @keyword("Verify Element")
+    def verify_element(self,xelement):
+        try:
+            element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, xelement)))
+            return element.is_displayed()  # Trả về True hoặc False
+        except NoSuchElementException:
+            return False  # Trả về False nếu không tìm thấy phần tử\]
+        
